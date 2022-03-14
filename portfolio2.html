@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asmau ismail</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/kube.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/custom.min.css" />
+    <link rel="shortcut icon" href="icons/favicon.png" />
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<script src="angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+
+ 
+<body ng-app="myApp">  
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">DRACO</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav">
+				    <ul>
+				        <li><a href="#!/">HOME</a></li>
+				        <li><a href="#!about">ABOUT</a></li>
+				        <li><a href="#skills">SKILLS</a></li>
+						<li><a href="#!education">EDUCATION</a></li>
+						<li><a href="#!experience">EXPERIENCE</a></li>
+						<li><a href="#!contact">CONTACT</a></li>	
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>  
+<div ng-view></div>
+</body>
+<script>
+const app = angular.module('myApp',['ngRoute']);
+app.config(function($routeProvider){
+$routeProvider
+.when("/",{
+template:`<div class="container">
+        <div class="image">
+			<img src="img/person2.jpg" alt="Avatar">
+		</div>
+		<div class="text">
+			<h1>Hi, I’m Asmau ismail</h1>
+			<p>Still learning about Software Engineering</p>
+					<p>I live in<br><span id="typed"></span></p>
+		</div>
+	</div>`
+})
+.when("/about",{
+    template:`<h1>here's what you need to know about me</h1>
+<p>I am currently a student and i am in the procesess of learning ,<br>and i hope to be 
+to be something in the feauture and hopefully start a tech company 
+</p>`
+})
+.when("/services",{
+template: `<h1> </h1>
+<p>
+i offer the best service 
+</p>`
+})
+.when("/skills",{
+template: `<h1>here are my skills </h1>
+<p>
+<ul>
+<li>Software Developer</li>
+<li>Support Engineer</li>
+<li>Technical Engineer</li>
+</ul>
+</p>`
+})
+.when("/education",{
+template: `<h1> education status</h1>
+<p>
+Bsc in software engineering 
+</p>`
+})
+.when("/experience",{
+template: `<h1>my experience </h1>
+<p>
+   i have  6 years experience in Software engineering  
+</p>`
+})
+.when("/contact",{
+template: `<h1>my contact</h1>
+<p>
+here is my contact +234-90-45-57-34-00
+</p>`
+})
+})
+</script>
+</body>
+</html>
+
+
+	
+   
+				
+
+	<!-- Introduction -->
+	
+
+	
+
+	<!-- Quote -->
+	<div class="quote">
+		<div class="container text-centered">
+			<h1>fight against the ugliness.</h1>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="units-row">
+			    <div class="unit-50">
+			    	<p>Handcrafted by Asmau ismail</p>
+			    </div>
+			    <div class="unit-50">
+					<ul class="social list-flat right">
+						<li><a href="mailto:afnizarhilmi@gmail.com"><i class="fa fa-send"></i></a></li>
+						<li><a href="http://twitter.com/afnizarnur"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="http://dribbble.com/afnizarnur"><i class="fa fa-dribbble"></i></a></li>
+						<li><a href="http://behance.com/afnizarnur"><i class="fa fa-behance"></i></a></li>
+					</ul>
+			    </div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/typed.min.js"></script>
+    <script src="js/kube.min.js"></script>
+    <script src="js/site.js"></script>
+    <script>
+		function newTyped(){}$(function(){$("#typed").typed({
+		// Change to edit type effect
+		strings: ["far northern sky", "your galaxy", "everywhere"],
+
+		typeSpeed:90,backDelay:700,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
+    </script>
+</html>
